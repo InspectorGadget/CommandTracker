@@ -18,7 +18,7 @@ class CommandTracker extends PluginBase implements Listener {
 	
 	public function onFilter(PlayerCommandPreprocessEvent $e) {
 		$msg = $e->getMessage();
-		$carray = implode(" ",trim($msg));
+		$carray = explode(" ",trim($msg));
 		$m = $carray[0];
 		$p = $e->getPlayer();
 		$n = $p->getName();
