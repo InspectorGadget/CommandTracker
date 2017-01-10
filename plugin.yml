@@ -1,8 +1,11 @@
 name: CommandTracker
 version: 1.0.0
-main: RTG\Tracker\CommandTracker;
+main: RTG\Tracker\CommandTracker
 api: 2.1.0
 author: IG
+commands:
+  check:
+    description: "Check CommandTracker"
 permissions:
   system.track:
     default: op

@@ -13,7 +13,8 @@ class CommandTracker extends PluginBase implements Listener {
 	
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->logs = new Config($this->getDataFolder() . "logs.yml");
+		@mkdir($this->getDataFolder() . "players");
+		// $this->logs = new Config($this->getDataFolder() . "player/".$n.".yml", Config::YAML, array()); #incase
 	}
 	
 	public function onFilter(PlayerCommandPreprocessEvent $e) {
@@ -27,6 +28,7 @@ class CommandTracker extends PluginBase implements Listener {
 			
 			if($p->isOp() or $p->hasPermission("system.track")) {
 				if($m === "/kick" or $m === "/ban" or $m === "/pardon") {
+					$this->logs = new Config($this->getDataFolder() . "players/".$n.".yml", Config::YAML, array());
 					$this->logs->set($time, "Player: " . $n . " | Command: " . $msg);
 					$this->logs->save();
 				}
