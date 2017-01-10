@@ -13,7 +13,7 @@ class CommandTracker extends PluginBase implements Listener {
 	
 	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->logs = new Config($this->getDataFolder() . "logs.txt");
+		$this->logs = new Config($this->getDataFolder() . "logs.yml");
 	}
 	
 	public function onFilter(PlayerCommandPreprocessEvent $e) {
