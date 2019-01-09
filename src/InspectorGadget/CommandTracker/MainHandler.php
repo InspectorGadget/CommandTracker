@@ -45,11 +45,11 @@ class MainHandler extends PluginBase implements Listener {
 
 		if ($this->getConfig()->get("enable") !== true) {
 			$this->getLogger()->info("Well, I've been set Disable in config.yml!");
-			$this->getServer()->getPluginManager()->disablePlugin($this);
-		} else {
-			$this->getServer()->getPluginManager()->registerEvents($this, $this);
-			$this->getLogger()->info("I'm ready!");
+			$this->getServer()->getPluginManager()->disablePlugin($this); // Disabling anyways!
 		}
+
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		$this->getLogger()->info("I'm ready!");
 
 	}
 
