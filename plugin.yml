@@ -1,0 +1,17 @@
+name: CommandTracker
+version: 2.0.0
+main: InspectorGadget\CommandTracker\MainHandler
+api: 3.0.0
+author: InspectorGadget
+
+commands:
+  ct:
+    description: "CommandTracker Command"
+permissions:
+  commandtrack:
+    default: op
+    description: "CommandTracker Root Permission"
+    children:
+      commandtrack.exempt:
+        default: op
+        description: "CommandTracker Exempt Permission"
