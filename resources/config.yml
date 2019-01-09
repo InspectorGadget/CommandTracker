@@ -1,0 +1,7 @@
+---
+# Toggle: true ? false
+enable: true
+
+## Commands (Must have '/' infront)
+commands: ["/kick", "/ban", "/kill"]
+...

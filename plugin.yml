@@ -1,11 +1,17 @@
 name: CommandTracker
-version: 1.0.0
-main: RTG\Tracker\CommandTracker
-api: 2.1.0
-author: IG
+version: 2.0.0
+main: InspectorGadget\CommandTracker\MainHandler
+api: 3.0.0
+author: InspectorGadget
+
 commands:
-  check:
-    description: "Check CommandTracker"
+  ct:
+    description: "CommandTracker Command"
 permissions:
-  system.track:
+  commandtrack:
     default: op
+    description: "CommandTracker Root Permission"
+    children:
+      commandtrack.exempt:
+        default: op
+        description: "CommandTracker Exempt Permission"
