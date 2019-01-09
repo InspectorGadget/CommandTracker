@@ -80,7 +80,7 @@ class MainHandler extends PluginBase implements Listener {
 			case "ct":
 				$sender->sendMessage(TF::GREEN . "CommandTracker is running perfectly!");
 				return true;
-			breal;
+			break;
 		}
 	}
 
