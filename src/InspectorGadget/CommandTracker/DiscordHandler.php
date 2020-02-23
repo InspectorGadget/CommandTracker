@@ -28,6 +28,7 @@ class DiscordHandler {
         curl_setopt_array($curl, array(
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_URL => $this->getHook(),
+	    CURLOPT_HTTPHEADER => array("Content-Type: application/json"),
             CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_SSL_VERIFYPEER => 0,
             CURLOPT_POST => 1,
